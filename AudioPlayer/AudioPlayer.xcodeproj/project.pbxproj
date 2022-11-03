@@ -13,6 +13,10 @@
 		FAF30D192913B4C400C6CD72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAF30D172913B4C400C6CD72 /* Main.storyboard */; };
 		FAF30D1B2913B4C600C6CD72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAF30D1A2913B4C600C6CD72 /* Assets.xcassets */; };
 		FAF30D1E2913B4C600C6CD72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAF30D1C2913B4C600C6CD72 /* LaunchScreen.storyboard */; };
+		FAF30D2D2913C5CC00C6CD72 /* MusicStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF30D2C2913C5CC00C6CD72 /* MusicStackView.swift */; };
+		FAF30D2F2913CCBB00C6CD72 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF30D2E2913CCBB00C6CD72 /* Song.swift */; };
+		FAF30D3729140EB400C6CD72 /* Черный бумер.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FAF30D3529140EB400C6CD72 /* Черный бумер.mp3 */; };
+		FAF30D3829140EB400C6CD72 /* Yesterday.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FAF30D3629140EB400C6CD72 /* Yesterday.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,11 @@
 		FAF30D1A2913B4C600C6CD72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAF30D1D2913B4C600C6CD72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAF30D1F2913B4C600C6CD72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAF30D2C2913C5CC00C6CD72 /* MusicStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicStackView.swift; sourceTree = "<group>"; };
+		FAF30D2E2913CCBB00C6CD72 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		FAF30D342913D14200C6CD72 /* mockingbird.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = mockingbird.mp3; sourceTree = "<group>"; };
+		FAF30D3529140EB400C6CD72 /* Черный бумер.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Черный бумер.mp3"; path = "../../../../../../Downloads/Черный бумер.mp3"; sourceTree = "<group>"; };
+		FAF30D3629140EB400C6CD72 /* Yesterday.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Yesterday.mp3; path = ../../../../../../Downloads/Yesterday.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +65,11 @@
 		FAF30D102913B4C400C6CD72 /* AudioPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				FAF30D332913D14200C6CD72 /* Songs */,
 				FAF30D262913B79E00C6CD72 /* SupportFiles */,
+				FAF30D2B2913C55200C6CD72 /* Views */,
 				FAF30D252913B78700C6CD72 /* ViewControllers */,
+				FAF30D302913CCC700C6CD72 /* Model */,
 				FAF30D272913B7F600C6CD72 /* Storyboard */,
 				FAF30D1A2913B4C600C6CD72 /* Assets.xcassets */,
 				FAF30D1F2913B4C600C6CD72 /* Info.plist */,
@@ -89,6 +101,32 @@
 				FAF30D1C2913B4C600C6CD72 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		FAF30D2B2913C55200C6CD72 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FAF30D2C2913C5CC00C6CD72 /* MusicStackView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FAF30D302913CCC700C6CD72 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FAF30D2E2913CCBB00C6CD72 /* Song.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FAF30D332913D14200C6CD72 /* Songs */ = {
+			isa = PBXGroup;
+			children = (
+				FAF30D3629140EB400C6CD72 /* Yesterday.mp3 */,
+				FAF30D3529140EB400C6CD72 /* Черный бумер.mp3 */,
+				FAF30D342913D14200C6CD72 /* mockingbird.mp3 */,
+			);
+			path = Songs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,8 +187,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAF30D3829140EB400C6CD72 /* Yesterday.mp3 in Resources */,
 				FAF30D1E2913B4C600C6CD72 /* LaunchScreen.storyboard in Resources */,
 				FAF30D1B2913B4C600C6CD72 /* Assets.xcassets in Resources */,
+				FAF30D3729140EB400C6CD72 /* Черный бумер.mp3 in Resources */,
 				FAF30D192913B4C400C6CD72 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -163,8 +203,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAF30D162913B4C400C6CD72 /* PlaylistViewController.swift in Sources */,
+				FAF30D2D2913C5CC00C6CD72 /* MusicStackView.swift in Sources */,
 				FAF30D122913B4C400C6CD72 /* AppDelegate.swift in Sources */,
 				FAF30D142913B4C400C6CD72 /* SceneDelegate.swift in Sources */,
+				FAF30D2F2913CCBB00C6CD72 /* Song.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

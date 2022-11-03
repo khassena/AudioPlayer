@@ -9,9 +9,14 @@ import UIKit
 
 class PlaylistViewController: UIViewController {
 
+    @IBOutlet weak var songImage: UIImageView!
+    @IBOutlet weak var nameOfSong: UILabel!
+    @IBOutlet weak var durationOfSong: UILabel!
+   
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
     }
 
 
