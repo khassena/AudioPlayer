@@ -17,112 +17,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="89h-h7-eMo">
-                                <rect key="frame" x="20" y="96" width="374" height="246"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="oMC-KO-Wby">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="66"/>
-                                        <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4rc-qC-KFh">
-                                                <rect key="frame" x="0.0" y="0.0" width="67" height="66"/>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="First Song" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VRT-bk-plK">
-                                                <rect key="frame" x="77" y="23" width="242" height="20.5"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="242" id="vyD-N7-I3Z"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I5G-WS-Cp6">
-                                                <rect key="frame" x="329" y="23" width="45" height="20.5"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="45" id="HIU-68-qGY"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Kdg-WI-i08">
-                                        <rect key="frame" x="0.0" y="90" width="374" height="66"/>
-                                        <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KpA-rS-2Ng">
-                                                <rect key="frame" x="0.0" y="0.0" width="67" height="66"/>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Second Song" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JX2-y9-yq0">
-                                                <rect key="frame" x="77" y="23" width="242" height="20.5"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="242" id="6v4-Me-6IR"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dnc-Ok-f20">
-                                                <rect key="frame" x="329" y="23" width="45" height="20.5"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="45" id="Svz-XH-IAd"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="hhQ-oN-T23">
-                                        <rect key="frame" x="0.0" y="180" width="374" height="66"/>
-                                        <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ULF-dR-ay2">
-                                                <rect key="frame" x="0.0" y="0.0" width="67" height="66"/>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Third Song" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PBn-Hv-OPt">
-                                                <rect key="frame" x="77" y="23" width="242" height="20.5"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="242" id="iFJ-P3-xJy"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dh0-7b-LYd">
-                                                <rect key="frame" x="329" y="23" width="45" height="20.5"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="45" id="2H6-g0-p2P"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
+                                <rect key="frame" x="20" y="96" width="374" height="66"/>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="89h-h7-eMo" secondAttribute="bottom" constant="700" id="2ee-ba-zxj"/>
                             <constraint firstAttribute="trailingMargin" secondItem="89h-h7-eMo" secondAttribute="trailing" id="8IC-eL-chX"/>
                             <constraint firstItem="89h-h7-eMo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="Cc8-xG-qch"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="89h-h7-eMo" secondAttribute="bottom" priority="750" constant="700" id="Fjv-Ej-mD1"/>
                             <constraint firstItem="89h-h7-eMo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="nl3-96-FZ6"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Plist" id="jIq-hm-4AE"/>
-                    <connections>
-                        <outlet property="durationOfSongFirst" destination="I5G-WS-Cp6" id="I5M-Vf-Zw6"/>
-                        <outlet property="durationOfSongSecond" destination="dnc-Ok-f20" id="uNS-aF-A4x"/>
-                        <outlet property="durationOfSongThird" destination="Dh0-7b-LYd" id="xtT-Qi-i7W"/>
-                        <outlet property="firstSongStackView" destination="oMC-KO-Wby" id="aHY-0F-hAS"/>
-                        <outlet property="nameOfSongFirst" destination="VRT-bk-plK" id="urm-tH-Ty3"/>
-                        <outlet property="nameOfSongSecond" destination="JX2-y9-yq0" id="dIl-uK-A7w"/>
-                        <outlet property="nameOfSongThird" destination="PBn-Hv-OPt" id="nM9-fb-fdy"/>
-                        <outlet property="secondSongStackView" destination="Kdg-WI-i08" id="amp-6W-hhh"/>
-                        <outlet property="songImageFirst" destination="4rc-qC-KFh" id="qYG-NP-qPf"/>
-                        <outlet property="songImageSecond" destination="KpA-rS-2Ng" id="IYM-xH-io4"/>
-                        <outlet property="songImageThird" destination="ULF-dR-ay2" id="RfU-hb-Xad"/>
-                        <outlet property="thirdSongStackView" destination="hhQ-oN-T23" id="Fwe-nN-A1Z"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

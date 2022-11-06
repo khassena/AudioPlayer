@@ -18,6 +18,9 @@
 		FAF30D462916ECF300C6CD72 /* Zach Bryan - Something In The Orange.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FAF30D452916ECF300C6CD72 /* Zach Bryan - Something In The Orange.mp3 */; };
 		FAF30D4D2917A9B700C6CD72 /* AVAsset+getItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF30D4C2917A9B700C6CD72 /* AVAsset+getItem.swift */; };
 		FAF30D502917B23200C6CD72 /* TimeInterval+getDuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF30D4F2917B23200C6CD72 /* TimeInterval+getDuration.swift */; };
+		FAF30D542917DD7000C6CD72 /* PLaylistStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF30D532917DD7000C6CD72 /* PLaylistStackView.swift */; };
+		FAF30D592918207400C6CD72 /* UILabel+CreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF30D582918207400C6CD72 /* UILabel+CreateView.swift */; };
+		FAF30D5B2918225400C6CD72 /* StackView+CreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF30D5A2918225400C6CD72 /* StackView+CreateView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,9 @@
 		FAF30D452916ECF300C6CD72 /* Zach Bryan - Something In The Orange.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Zach Bryan - Something In The Orange.mp3"; path = "../../../../../../Downloads/Zach Bryan - Something In The Orange.mp3"; sourceTree = "<group>"; };
 		FAF30D4C2917A9B700C6CD72 /* AVAsset+getItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVAsset+getItem.swift"; sourceTree = "<group>"; };
 		FAF30D4F2917B23200C6CD72 /* TimeInterval+getDuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+getDuration.swift"; sourceTree = "<group>"; };
+		FAF30D532917DD7000C6CD72 /* PLaylistStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PLaylistStackView.swift; sourceTree = "<group>"; };
+		FAF30D582918207400C6CD72 /* UILabel+CreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+CreateView.swift"; sourceTree = "<group>"; };
+		FAF30D5A2918225400C6CD72 /* StackView+CreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StackView+CreateView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,8 +72,9 @@
 		FAF30D102913B4C400C6CD72 /* AudioPlayer */ = {
 			isa = PBXGroup;
 			children = (
-				FAF30D302913CCC700C6CD72 /* Model */,
-				FAF30D252913B78700C6CD72 /* ViewControllers */,
+				FAF30D302913CCC700C6CD72 /* Models */,
+				FAF30D552917DD7600C6CD72 /* Views */,
+				FAF30D252913B78700C6CD72 /* Controllers */,
 				FAF30D4E2917A9D400C6CD72 /* Extensions */,
 				FAF30D272913B7F600C6CD72 /* Storyboard */,
 				FAF30D332913D14200C6CD72 /* Songs */,
@@ -77,12 +84,12 @@
 			path = AudioPlayer;
 			sourceTree = "<group>";
 		};
-		FAF30D252913B78700C6CD72 /* ViewControllers */ = {
+		FAF30D252913B78700C6CD72 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				FAF30D152913B4C400C6CD72 /* PlaylistViewController.swift */,
 			);
-			path = ViewControllers;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		FAF30D262913B79E00C6CD72 /* SupportFiles */ = {
@@ -104,12 +111,12 @@
 			path = Storyboard;
 			sourceTree = "<group>";
 		};
-		FAF30D302913CCC700C6CD72 /* Model */ = {
+		FAF30D302913CCC700C6CD72 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				FAF30D2E2913CCBB00C6CD72 /* Song.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		FAF30D332913D14200C6CD72 /* Songs */ = {
@@ -126,8 +133,26 @@
 			children = (
 				FAF30D4C2917A9B700C6CD72 /* AVAsset+getItem.swift */,
 				FAF30D4F2917B23200C6CD72 /* TimeInterval+getDuration.swift */,
+				FAF30D5C2918225D00C6CD72 /* PlaylistStackView+CreateSubviews */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FAF30D552917DD7600C6CD72 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FAF30D532917DD7000C6CD72 /* PLaylistStackView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FAF30D5C2918225D00C6CD72 /* PlaylistStackView+CreateSubviews */ = {
+			isa = PBXGroup;
+			children = (
+				FAF30D582918207400C6CD72 /* UILabel+CreateView.swift */,
+				FAF30D5A2918225400C6CD72 /* StackView+CreateView.swift */,
+			);
+			path = "PlaylistStackView+CreateSubviews";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,10 +230,13 @@
 			files = (
 				FAF30D4D2917A9B700C6CD72 /* AVAsset+getItem.swift in Sources */,
 				FAF30D502917B23200C6CD72 /* TimeInterval+getDuration.swift in Sources */,
+				FAF30D592918207400C6CD72 /* UILabel+CreateView.swift in Sources */,
 				FAF30D162913B4C400C6CD72 /* PlaylistViewController.swift in Sources */,
 				FAF30D122913B4C400C6CD72 /* AppDelegate.swift in Sources */,
 				FAF30D142913B4C400C6CD72 /* SceneDelegate.swift in Sources */,
+				FAF30D542917DD7000C6CD72 /* PLaylistStackView.swift in Sources */,
 				FAF30D2F2913CCBB00C6CD72 /* Song.swift in Sources */,
+				FAF30D5B2918225400C6CD72 /* StackView+CreateView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
