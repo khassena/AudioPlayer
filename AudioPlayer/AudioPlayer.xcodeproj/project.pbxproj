@@ -14,8 +14,10 @@
 		FAF30D1B2913B4C600C6CD72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAF30D1A2913B4C600C6CD72 /* Assets.xcassets */; };
 		FAF30D1E2913B4C600C6CD72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAF30D1C2913B4C600C6CD72 /* LaunchScreen.storyboard */; };
 		FAF30D2F2913CCBB00C6CD72 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF30D2E2913CCBB00C6CD72 /* Song.swift */; };
-		FAF30D3729140EB400C6CD72 /* Черный бумер.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FAF30D3529140EB400C6CD72 /* Черный бумер.mp3 */; };
 		FAF30D3829140EB400C6CD72 /* Yesterday.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FAF30D3629140EB400C6CD72 /* Yesterday.mp3 */; };
+		FAF30D462916ECF300C6CD72 /* Zach Bryan - Something In The Orange.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FAF30D452916ECF300C6CD72 /* Zach Bryan - Something In The Orange.mp3 */; };
+		FAF30D4D2917A9B700C6CD72 /* AVAsset+getItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF30D4C2917A9B700C6CD72 /* AVAsset+getItem.swift */; };
+		FAF30D502917B23200C6CD72 /* TimeInterval+getDuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF30D4F2917B23200C6CD72 /* TimeInterval+getDuration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,9 +30,10 @@
 		FAF30D1D2913B4C600C6CD72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAF30D1F2913B4C600C6CD72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAF30D2E2913CCBB00C6CD72 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
-		FAF30D342913D14200C6CD72 /* mockingbird.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = mockingbird.mp3; sourceTree = "<group>"; };
-		FAF30D3529140EB400C6CD72 /* Черный бумер.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Черный бумер.mp3"; path = "../../../../../../Downloads/Черный бумер.mp3"; sourceTree = "<group>"; };
 		FAF30D3629140EB400C6CD72 /* Yesterday.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Yesterday.mp3; path = ../../../../../../Downloads/Yesterday.mp3; sourceTree = "<group>"; };
+		FAF30D452916ECF300C6CD72 /* Zach Bryan - Something In The Orange.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Zach Bryan - Something In The Orange.mp3"; path = "../../../../../../Downloads/Zach Bryan - Something In The Orange.mp3"; sourceTree = "<group>"; };
+		FAF30D4C2917A9B700C6CD72 /* AVAsset+getItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVAsset+getItem.swift"; sourceTree = "<group>"; };
+		FAF30D4F2917B23200C6CD72 /* TimeInterval+getDuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+getDuration.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,11 +66,12 @@
 		FAF30D102913B4C400C6CD72 /* AudioPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				FAF30D302913CCC700C6CD72 /* Model */,
+				FAF30D252913B78700C6CD72 /* ViewControllers */,
+				FAF30D4E2917A9D400C6CD72 /* Extensions */,
+				FAF30D272913B7F600C6CD72 /* Storyboard */,
 				FAF30D332913D14200C6CD72 /* Songs */,
 				FAF30D262913B79E00C6CD72 /* SupportFiles */,
-				FAF30D252913B78700C6CD72 /* ViewControllers */,
-				FAF30D302913CCC700C6CD72 /* Model */,
-				FAF30D272913B7F600C6CD72 /* Storyboard */,
 				FAF30D1A2913B4C600C6CD72 /* Assets.xcassets */,
 			);
 			path = AudioPlayer;
@@ -111,11 +115,19 @@
 		FAF30D332913D14200C6CD72 /* Songs */ = {
 			isa = PBXGroup;
 			children = (
+				FAF30D452916ECF300C6CD72 /* Zach Bryan - Something In The Orange.mp3 */,
 				FAF30D3629140EB400C6CD72 /* Yesterday.mp3 */,
-				FAF30D3529140EB400C6CD72 /* Черный бумер.mp3 */,
-				FAF30D342913D14200C6CD72 /* mockingbird.mp3 */,
 			);
 			path = Songs;
+			sourceTree = "<group>";
+		};
+		FAF30D4E2917A9D400C6CD72 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FAF30D4C2917A9B700C6CD72 /* AVAsset+getItem.swift */,
+				FAF30D4F2917B23200C6CD72 /* TimeInterval+getDuration.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,10 +188,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAF30D462916ECF300C6CD72 /* Zach Bryan - Something In The Orange.mp3 in Resources */,
 				FAF30D3829140EB400C6CD72 /* Yesterday.mp3 in Resources */,
 				FAF30D1E2913B4C600C6CD72 /* LaunchScreen.storyboard in Resources */,
 				FAF30D1B2913B4C600C6CD72 /* Assets.xcassets in Resources */,
-				FAF30D3729140EB400C6CD72 /* Черный бумер.mp3 in Resources */,
 				FAF30D192913B4C400C6CD72 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -191,6 +203,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAF30D4D2917A9B700C6CD72 /* AVAsset+getItem.swift in Sources */,
+				FAF30D502917B23200C6CD72 /* TimeInterval+getDuration.swift in Sources */,
 				FAF30D162913B4C400C6CD72 /* PlaylistViewController.swift in Sources */,
 				FAF30D122913B4C400C6CD72 /* AppDelegate.swift in Sources */,
 				FAF30D142913B4C400C6CD72 /* SceneDelegate.swift in Sources */,

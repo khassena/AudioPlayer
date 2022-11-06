@@ -6,13 +6,14 @@
 //
 
 import UIKit
+import AVFoundation
 
 class PlaylistViewController: UIViewController {
 
     @IBOutlet weak var songImageFirst: UIImageView!
     @IBOutlet weak var nameOfSongFirst: UILabel!
     @IBOutlet weak var durationOfSongFirst: UILabel!
-    @IBOutlet weak var FirstSongStackView: UIStackView!
+    @IBOutlet weak var firstSongStackView: UIStackView!
     
     
     @IBOutlet weak var songImageSecond: UIImageView!
@@ -24,12 +25,16 @@ class PlaylistViewController: UIViewController {
     @IBOutlet weak var nameOfSongThird: UILabel!
     @IBOutlet weak var durationOfSongThird: UILabel!
     @IBOutlet weak var thirdSongStackView: UIStackView!
+    var player: AVAudioPlayer?
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+        }
     }
    
+    
 }
 

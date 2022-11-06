@@ -8,37 +8,39 @@
 import Foundation
 import AVFoundation
 
-enum Music: String {
-    case mockingbird = "mockingbird"
-    case blackBumer = "Черный бумер"
-    case yesterday = "Yesterday"
-    case defaults
+struct Song {
+    let songName: String?
+    let artist: String?
+    let songImage: Data?
+    let songUrl: String?
+    let duration: String?
+    let player: AVAudioPlayer?
 }
 
-struct Song {
-    let songName: Music
-    let duration: Float = 0
-    
-    func getSong(songName: Music) -> AVAudioPlayer {
-        var player = AVAudioPlayer()
+extension Song {
+    static func getSongs() -> [Song] {
+        
+        var songs = [Song]()
+        
         do {
-            if let audioPath = Bundle.main.path(forResource: songName.rawValue, ofType: ".mp3") {
-            try player = AVAudioPlayer(contentsOf: URL(fileURLWithPath: audioPath))
+            let fm = FileManager.default
+            let path = Bundle.main.resourcePath!
+            let docDirectory = URL(fileURLWithPath: path)
+            let directoryContents = try fm.contentsOfDirectory(at: docDirectory, includingPropertiesForKeys: nil)
+            let mp3Files = directoryContents.filter{ $0.pathExtension == "mp3" }
+            for url in mp3Files {
+                let audioPlayer = try AVAudioPlayer(contentsOf: url)
+                let asset = AVAsset(url: url)
+                songs.append(Song(songName: asset.getItems(byKey: .commonKeyTitle),
+                                  artist: asset.getItems(byKey: .commonKeyArtist),
+                                  songImage: asset.metadata.first(where: { $0.commonKey == .commonKeyArtwork})?.value as? Data,
+                                  songUrl: "\(url)",
+                                  duration: audioPlayer.duration.getDuration(),
+                                  player: audioPlayer))
             }
         } catch {
             print(error)
         }
-        return player
-    }
-}
-
-extension Song {
-    static func createSong(index: Int) -> Song {
-        switch index {
-        case 1: return Song(songName: Music.mockingbird)
-        case 2: return Song(songName: Music.blackBumer)
-        case 3: return Song(songName: Music.yesterday)
-        default: return Song(songName: Music.defaults)
-        }
+        return songs
     }
 }

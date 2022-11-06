@@ -110,10 +110,10 @@
                     </view>
                     <navigationItem key="navigationItem" title="Plist" id="jIq-hm-4AE"/>
                     <connections>
-                        <outlet property="FirstSongStackView" destination="oMC-KO-Wby" id="aHY-0F-hAS"/>
                         <outlet property="durationOfSongFirst" destination="I5G-WS-Cp6" id="I5M-Vf-Zw6"/>
                         <outlet property="durationOfSongSecond" destination="dnc-Ok-f20" id="uNS-aF-A4x"/>
                         <outlet property="durationOfSongThird" destination="Dh0-7b-LYd" id="xtT-Qi-i7W"/>
+                        <outlet property="firstSongStackView" destination="oMC-KO-Wby" id="aHY-0F-hAS"/>
                         <outlet property="nameOfSongFirst" destination="VRT-bk-plK" id="urm-tH-Ty3"/>
                         <outlet property="nameOfSongSecond" destination="JX2-y9-yq0" id="dIl-uK-A7w"/>
                         <outlet property="nameOfSongThird" destination="PBn-Hv-OPt" id="nM9-fb-fdy"/>
