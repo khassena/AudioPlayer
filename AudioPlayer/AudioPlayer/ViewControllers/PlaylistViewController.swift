@@ -31,14 +31,7 @@ class PlaylistViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-<<<<<<< HEAD
-    }
-=======
-
-        }
     }
    
-    
->>>>>>> 13c5327bf4eb51bc8cd05627031c8d9d3c6c2bd6
 }
 
