@@ -9,12 +9,12 @@ import Foundation
 import AVFoundation
 
 struct Song {
-    let songName: String?
-    let artist: String?
-    let songImage: Data?
-    let songUrl: String?
-    let duration: String?
-    let player: AVAudioPlayer?
+    var songName: String?
+    var artist: String?
+    var songImage: Data?
+    var songUrl: String?
+    var duration: String?
+    var player: AVAudioPlayer?
 }
 
 extension Song {

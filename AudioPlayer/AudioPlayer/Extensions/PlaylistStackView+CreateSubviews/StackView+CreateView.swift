@@ -17,4 +17,11 @@ extension UIStackView {
         stackView.spacing = 10.0
         return stackView
     }
+    
+    func bottomLine() {
+        let bottomLine = CALayer()
+        bottomLine.frame = CGRect(x: 0, y: self.frame.height + 11.0 , width: self.frame.width, height: 1.0)
+        bottomLine.backgroundColor = UIColor.gray.cgColor
+        self.layer.addSublayer(bottomLine)
+    }
 }

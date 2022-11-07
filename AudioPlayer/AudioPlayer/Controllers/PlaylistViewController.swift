@@ -8,25 +8,25 @@
 import UIKit
 import AVFoundation
 
-protocol PlaylistViewControllerDelegate: AnyObject {
-    func sendSongs(_ song: [Song])
-}
-
 class PlaylistViewController: UIViewController {
 
+    @IBOutlet weak var generalStackView: UIStackView!
+    
     private let songs = Song.getSongs()
     var player: AVAudioPlayer?
-    private let playlist = PlaylistStackView()
-    weak var delegate: PlaylistViewControllerDelegate?
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setupView()
     }
    
     func setupView() {
-        delegate?.sendSongs(songs)
+        for song in songs {
+            let playlist = PlaylistStackView()
+            playlist.setupValue(song)
+            generalStackView.addArrangedSubview(playlist)
+        }
+        
     }
 }
 

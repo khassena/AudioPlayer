@@ -13,6 +13,7 @@ extension UILabel {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = text
         label.textAlignment = .left
+        label.numberOfLines = 0
         if style == "bold" {
             label.font = UIFont.boldSystemFont(ofSize: fontSize)
         } else {

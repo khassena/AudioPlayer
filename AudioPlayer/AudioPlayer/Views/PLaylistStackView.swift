@@ -22,32 +22,41 @@ class PlaylistStackView: UIStackView {
         return imageView
     }()
     
-    private let titleLabel = UILabel.createLabel(text: "assas",
-                                                color: .black,
-                                                fontSize: 20,
-                                                style: "")
+    private let titleLabel = UILabel.createLabel(text: "",
+                                                 color: .black,
+                                                 fontSize: 20,
+                                                 style: "")
     
-    private let artistLabel = UILabel.createLabel(text: "dfddvf",
+    private let artistLabel = UILabel.createLabel(text: "",
                                                   color: .gray,
                                                   fontSize: 17,
                                                   style: "regular")
     
-    private let songDuration = UILabel.createLabel(text: "vf",
+    private let songDuration = UILabel.createLabel(text: "",
                                                    color: .gray,
                                                    fontSize: 17,
                                                    style: "regular")
-    private lazy var namesStackView = UIStackView.createStackView(views: [titleLabel, artistLabel],
-                                                                 axis: .vertical)
+    private lazy var namesStackView = UIStackView.createStackView(views: [titleLabel, artistLabel], axis: .vertical)
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
-        let pLaylistVC = PlaylistViewController()
-        pLaylistVC.delegate = self
     }
     
     required init(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        bottomLine()
+    }
+    
+    public func setupValue(_ song: Song) {
+        imageView.image = (UIImage(data: song.songImage ?? Data())) ?? UIImage(named: "album-placeholder")
+        titleLabel.text = song.songName
+        artistLabel.text = song.artist
+        songDuration.text = song.duration
     }
     
     func setupView() {
@@ -58,7 +67,6 @@ class PlaylistStackView: UIStackView {
         alignment = .center
         distribution = .fillProportionally
         spacing = 10.0
-        imageView.image = UIImage(named: "dog12")
         
         NSLayoutConstraint.activate([
             namesStackView.widthAnchor.constraint(greaterThanOrEqualToConstant: 242),
@@ -70,9 +78,3 @@ class PlaylistStackView: UIStackView {
     
 }
 
-extension PlaylistStackView: PlaylistViewControllerDelegate {
-    func sendSongs(_ song: [Song]) {
-        
-    }
-    
-}

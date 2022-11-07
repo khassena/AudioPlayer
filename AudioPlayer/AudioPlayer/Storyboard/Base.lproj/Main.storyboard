@@ -31,6 +31,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Plist" id="jIq-hm-4AE"/>
+                    <connections>
+                        <outlet property="generalStackView" destination="89h-h7-eMo" id="mUS-Xz-8uI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

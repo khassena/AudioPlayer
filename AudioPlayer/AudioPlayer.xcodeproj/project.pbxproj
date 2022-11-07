@@ -14,13 +14,15 @@
 		FAF30D1B2913B4C600C6CD72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAF30D1A2913B4C600C6CD72 /* Assets.xcassets */; };
 		FAF30D1E2913B4C600C6CD72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAF30D1C2913B4C600C6CD72 /* LaunchScreen.storyboard */; };
 		FAF30D2F2913CCBB00C6CD72 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF30D2E2913CCBB00C6CD72 /* Song.swift */; };
-		FAF30D3829140EB400C6CD72 /* Yesterday.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FAF30D3629140EB400C6CD72 /* Yesterday.mp3 */; };
 		FAF30D462916ECF300C6CD72 /* Zach Bryan - Something In The Orange.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FAF30D452916ECF300C6CD72 /* Zach Bryan - Something In The Orange.mp3 */; };
 		FAF30D4D2917A9B700C6CD72 /* AVAsset+getItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF30D4C2917A9B700C6CD72 /* AVAsset+getItem.swift */; };
 		FAF30D502917B23200C6CD72 /* TimeInterval+getDuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF30D4F2917B23200C6CD72 /* TimeInterval+getDuration.swift */; };
 		FAF30D542917DD7000C6CD72 /* PLaylistStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF30D532917DD7000C6CD72 /* PLaylistStackView.swift */; };
 		FAF30D592918207400C6CD72 /* UILabel+CreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF30D582918207400C6CD72 /* UILabel+CreateView.swift */; };
 		FAF30D5B2918225400C6CD72 /* StackView+CreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF30D5A2918225400C6CD72 /* StackView+CreateView.swift */; };
+		FAF30D6029191E2600C6CD72 /* 91_maroon_5_cardi_b_girls_like_you_myzuka.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FAF30D5F29191E2600C6CD72 /* 91_maroon_5_cardi_b_girls_like_you_myzuka.mp3 */; };
+		FAF30D6229191EE600C6CD72 /* 01_ed_sheeran_shape_of_you_myzuka.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FAF30D6129191EE600C6CD72 /* 01_ed_sheeran_shape_of_you_myzuka.mp3 */; };
+		FAF30D642919298C00C6CD72 /* 04_willy_william_la_la_la_myzuka.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FAF30D632919298C00C6CD72 /* 04_willy_william_la_la_la_myzuka.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,13 +35,15 @@
 		FAF30D1D2913B4C600C6CD72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAF30D1F2913B4C600C6CD72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAF30D2E2913CCBB00C6CD72 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
-		FAF30D3629140EB400C6CD72 /* Yesterday.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Yesterday.mp3; path = ../../../../../../Downloads/Yesterday.mp3; sourceTree = "<group>"; };
 		FAF30D452916ECF300C6CD72 /* Zach Bryan - Something In The Orange.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Zach Bryan - Something In The Orange.mp3"; path = "../../../../../../Downloads/Zach Bryan - Something In The Orange.mp3"; sourceTree = "<group>"; };
 		FAF30D4C2917A9B700C6CD72 /* AVAsset+getItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVAsset+getItem.swift"; sourceTree = "<group>"; };
 		FAF30D4F2917B23200C6CD72 /* TimeInterval+getDuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+getDuration.swift"; sourceTree = "<group>"; };
 		FAF30D532917DD7000C6CD72 /* PLaylistStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PLaylistStackView.swift; sourceTree = "<group>"; };
 		FAF30D582918207400C6CD72 /* UILabel+CreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+CreateView.swift"; sourceTree = "<group>"; };
 		FAF30D5A2918225400C6CD72 /* StackView+CreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StackView+CreateView.swift"; sourceTree = "<group>"; };
+		FAF30D5F29191E2600C6CD72 /* 91_maroon_5_cardi_b_girls_like_you_myzuka.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = 91_maroon_5_cardi_b_girls_like_you_myzuka.mp3; path = ../../../../../../Downloads/91_maroon_5_cardi_b_girls_like_you_myzuka.mp3; sourceTree = "<group>"; };
+		FAF30D6129191EE600C6CD72 /* 01_ed_sheeran_shape_of_you_myzuka.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = 01_ed_sheeran_shape_of_you_myzuka.mp3; path = ../../../../../../Downloads/01_ed_sheeran_shape_of_you_myzuka.mp3; sourceTree = "<group>"; };
+		FAF30D632919298C00C6CD72 /* 04_willy_william_la_la_la_myzuka.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = 04_willy_william_la_la_la_myzuka.mp3; path = ../../../../../../Downloads/04_willy_william_la_la_la_myzuka.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,8 +126,10 @@
 		FAF30D332913D14200C6CD72 /* Songs */ = {
 			isa = PBXGroup;
 			children = (
+				FAF30D632919298C00C6CD72 /* 04_willy_william_la_la_la_myzuka.mp3 */,
+				FAF30D5F29191E2600C6CD72 /* 91_maroon_5_cardi_b_girls_like_you_myzuka.mp3 */,
 				FAF30D452916ECF300C6CD72 /* Zach Bryan - Something In The Orange.mp3 */,
-				FAF30D3629140EB400C6CD72 /* Yesterday.mp3 */,
+				FAF30D6129191EE600C6CD72 /* 01_ed_sheeran_shape_of_you_myzuka.mp3 */,
 			);
 			path = Songs;
 			sourceTree = "<group>";
@@ -214,9 +220,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAF30D462916ECF300C6CD72 /* Zach Bryan - Something In The Orange.mp3 in Resources */,
-				FAF30D3829140EB400C6CD72 /* Yesterday.mp3 in Resources */,
 				FAF30D1E2913B4C600C6CD72 /* LaunchScreen.storyboard in Resources */,
+				FAF30D6029191E2600C6CD72 /* 91_maroon_5_cardi_b_girls_like_you_myzuka.mp3 in Resources */,
+				FAF30D642919298C00C6CD72 /* 04_willy_william_la_la_la_myzuka.mp3 in Resources */,
 				FAF30D1B2913B4C600C6CD72 /* Assets.xcassets in Resources */,
+				FAF30D6229191EE600C6CD72 /* 01_ed_sheeran_shape_of_you_myzuka.mp3 in Resources */,
 				FAF30D192913B4C400C6CD72 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
