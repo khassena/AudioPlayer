@@ -33,11 +33,31 @@
                     <navigationItem key="navigationItem" title="Plist" id="jIq-hm-4AE"/>
                     <connections>
                         <outlet property="generalStackView" destination="89h-h7-eMo" id="mUS-Xz-8uI"/>
+                        <segue destination="TBn-Bw-FI5" kind="presentation" identifier="songVCSegue" id="gga-yH-mWP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="489.85507246376818" y="87.723214285714278"/>
+        </scene>
+        <!--Playing from album-->
+        <scene sceneID="xz9-A1-3hR">
+            <objects>
+                <viewController storyboardIdentifier="sonVC" id="hke-hp-if8" customClass="SongViewController" customModule="AudioPlayer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oCU-dI-Wn6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="wDa-1t-UMe"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Playing from album" id="hwQ-tF-qqg">
+                        <barButtonItem key="leftBarButtonItem" image="chevron.down" catalog="system" style="plain" id="zF3-YG-g3v"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="square.and.arrow.up" catalog="system" style="plain" id="T5a-km-NXf"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D11-fG-rX2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2042.0289855072465" y="87.723214285714278"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gy4-3R-2kG">
@@ -57,10 +77,38 @@
             </objects>
             <point key="canvasLocation" x="-339" y="89"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="etv-Or-qGn">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TBn-Bw-FI5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="I9H-FU-5Tb"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="TrK-2e-V9A">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" systemColor="tintColor"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="hke-hp-if8" kind="relationship" relationship="rootViewController" id="sUP-U7-1xV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dms-Kt-W3t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1253.6231884057972" y="87.723214285714278"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="chevron.down" catalog="system" width="128" height="72"/>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

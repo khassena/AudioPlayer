@@ -7,11 +7,13 @@
 
 import UIKit
 
-protocol PlaylistStackViewDelegate {
+protocol PlaylistStackViewDelegate: AnyObject {
     func didTap(_ stackView: PlaylistStackView)
 }
 
 class PlaylistStackView: UIStackView {
+    
+    weak var delegate: PlaylistStackViewDelegate?
     
     private let imageView: UIImageView = {
         let imageView = UIImageView()
@@ -21,17 +23,17 @@ class PlaylistStackView: UIStackView {
         imageView.contentMode = .scaleAspectFill
         return imageView
     }()
-    
+
     private let titleLabel = UILabel.createLabel(text: "",
                                                  color: .black,
                                                  fontSize: 20,
                                                  style: "")
-    
+
     private let artistLabel = UILabel.createLabel(text: "",
                                                   color: .gray,
                                                   fontSize: 17,
                                                   style: "regular")
-    
+
     private let songDuration = UILabel.createLabel(text: "",
                                                    color: .gray,
                                                    fontSize: 17,
@@ -49,16 +51,18 @@ class PlaylistStackView: UIStackView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
+        let recognizer = UITapGestureRecognizer(target: self, action: #selector(didTap))
+        self.addGestureRecognizer(recognizer)
         bottomLine()
     }
-    
+
     public func setupValue(_ song: Song) {
         imageView.image = (UIImage(data: song.songImage ?? Data())) ?? UIImage(named: "album-placeholder")
         titleLabel.text = song.songName
         artistLabel.text = song.artist
         songDuration.text = song.duration
     }
-    
+
     func setupView() {
         addArrangedSubview(imageView)
         addArrangedSubview(namesStackView)
@@ -67,13 +71,17 @@ class PlaylistStackView: UIStackView {
         alignment = .center
         distribution = .fillProportionally
         spacing = 10.0
-        
+
         NSLayoutConstraint.activate([
             namesStackView.widthAnchor.constraint(greaterThanOrEqualToConstant: 242),
             songDuration.widthAnchor.constraint(greaterThanOrEqualToConstant: 45),
             imageView.widthAnchor.constraint(equalToConstant: 67),
             imageView.heightAnchor.constraint(equalToConstant: 66)
         ])
+    }
+    
+    @objc func didTap() {
+        delegate?.didTap(self)
     }
     
 }

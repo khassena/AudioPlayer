@@ -24,9 +24,19 @@ class PlaylistViewController: UIViewController {
         for song in songs {
             let playlist = PlaylistStackView()
             playlist.setupValue(song)
+            playlist.delegate = self
             generalStackView.addArrangedSubview(playlist)
         }
-        
     }
 }
+
+extension PlaylistViewController: PlaylistStackViewDelegate {
+    func didTap(_ stackView: PlaylistStackView) {
+        stackView.clickAnimation {
+            self.performSegue(withIdentifier: "songVCSegue", sender: nil)
+        }
+    }
+}
+
+
 
