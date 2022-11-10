@@ -33,6 +33,7 @@ class PlaylistViewController: UIViewController {
 extension PlaylistViewController: PlaylistStackViewDelegate {
     func didTap(_ stackView: PlaylistStackView) {
         stackView.clickAnimation {
+            
             self.performSegue(withIdentifier: "songVCSegue", sender: nil)
         }
     }

@@ -25,6 +25,7 @@
 		FAF30D642919298C00C6CD72 /* 04_willy_william_la_la_la_myzuka.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FAF30D632919298C00C6CD72 /* 04_willy_william_la_la_la_myzuka.mp3 */; };
 		FAF30D66291A8AB500C6CD72 /* SongViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF30D65291A8AB500C6CD72 /* SongViewController.swift */; };
 		FAF30D68291AA8F300C6CD72 /* NavItem+SetSubtitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF30D67291AA8F300C6CD72 /* NavItem+SetSubtitle.swift */; };
+		FAF30D6A291C05FE00C6CD72 /* CustomSongSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF30D69291C05FE00C6CD72 /* CustomSongSlider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		FAF30D632919298C00C6CD72 /* 04_willy_william_la_la_la_myzuka.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = 04_willy_william_la_la_la_myzuka.mp3; path = ../../../../../../Downloads/04_willy_william_la_la_la_myzuka.mp3; sourceTree = "<group>"; };
 		FAF30D65291A8AB500C6CD72 /* SongViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongViewController.swift; sourceTree = "<group>"; };
 		FAF30D67291AA8F300C6CD72 /* NavItem+SetSubtitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavItem+SetSubtitle.swift"; sourceTree = "<group>"; };
+		FAF30D69291C05FE00C6CD72 /* CustomSongSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSongSlider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				FAF30D532917DD7000C6CD72 /* PLaylistStackView.swift */,
+				FAF30D69291C05FE00C6CD72 /* CustomSongSlider.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -248,6 +251,7 @@
 				FAF30D162913B4C400C6CD72 /* PlaylistViewController.swift in Sources */,
 				FAF30D122913B4C400C6CD72 /* AppDelegate.swift in Sources */,
 				FAF30D68291AA8F300C6CD72 /* NavItem+SetSubtitle.swift in Sources */,
+				FAF30D6A291C05FE00C6CD72 /* CustomSongSlider.swift in Sources */,
 				FAF30D142913B4C400C6CD72 /* SceneDelegate.swift in Sources */,
 				FAF30D542917DD7000C6CD72 /* PLaylistStackView.swift in Sources */,
 				FAF30D66291A8AB500C6CD72 /* SongViewController.swift in Sources */,
