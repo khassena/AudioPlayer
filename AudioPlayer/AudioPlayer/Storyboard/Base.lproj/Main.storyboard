@@ -195,6 +195,20 @@
                         <barButtonItem key="leftBarButtonItem" image="chevron.down" catalog="system" id="zF3-YG-g3v"/>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="square.and.arrow.up" catalog="system" id="T5a-km-NXf"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="NextSongButton" destination="Jat-E8-YPE" id="foP-da-dKJ"/>
+                        <outlet property="artistName" destination="YfI-YM-iBK" id="VN4-3s-rRj"/>
+                        <outlet property="playButton" destination="186-17-Vei" id="dmf-WC-HQo"/>
+                        <outlet property="prevSongButton" destination="Eg7-9r-nnJ" id="Kkt-zB-xig"/>
+                        <outlet property="repeatButton" destination="8Cs-rI-H5d" id="zC4-nF-zC3"/>
+                        <outlet property="shuffleButton" destination="KHj-5W-LiY" id="sYq-Bb-W85"/>
+                        <outlet property="songDurationBackward" destination="VTx-ht-N1A" id="v2r-Ui-OTK"/>
+                        <outlet property="songDurationForward" destination="sVg-S9-dq8" id="AQv-7t-R30"/>
+                        <outlet property="songDurationStackView" destination="mNt-NG-I0R" id="4Pv-H4-uMm"/>
+                        <outlet property="songImage" destination="BEC-zc-w1h" id="jFN-jk-ozN"/>
+                        <outlet property="songName" destination="pfN-IZ-tqj" id="18k-Op-WoT"/>
+                        <outlet property="volumeSlider" destination="cit-PS-bXm" id="dsI-YA-E2k"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D11-fG-rX2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

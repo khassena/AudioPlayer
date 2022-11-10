@@ -39,6 +39,7 @@ class PlaylistStackView: UIStackView {
                                                    fontSize: 17,
                                                    style: "regular")
     private lazy var namesStackView = UIStackView.createStackView(views: [titleLabel, artistLabel], axis: .vertical)
+    var song = Song()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -61,6 +62,7 @@ class PlaylistStackView: UIStackView {
         titleLabel.text = song.songName
         artistLabel.text = song.artist
         songDuration.text = song.duration
+        self.song = song
     }
 
     func setupView() {
