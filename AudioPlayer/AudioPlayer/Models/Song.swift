@@ -8,8 +8,9 @@
 import Foundation
 import AVFoundation
 
-struct Song {
+struct Song: Equatable {
     var songName: String?
+    var albumName: String?
     var artist: String?
     var songImage: Data?
     var songUrl: String?
@@ -32,6 +33,7 @@ extension Song {
                 let audioPlayer = try AVAudioPlayer(contentsOf: url)
                 let asset = AVAsset(url: url)
                 songs.append(Song(songName: asset.getItems(byKey: .commonKeyTitle),
+                                  albumName: asset.getItems(byKey: .commonKeyAlbumName),
                                   artist: asset.getItems(byKey: .commonKeyArtist),
                                   songImage: asset.metadata.first(where: { $0.commonKey == .commonKeyArtwork})?.value as? Data,
                                   songUrl: "\(url)",

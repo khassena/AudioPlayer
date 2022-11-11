@@ -45,7 +45,7 @@
         <scene sceneID="xz9-A1-3hR">
             <objects>
                 <viewController storyboardIdentifier="sonVC" id="hke-hp-if8" customClass="SongViewController" customModule="AudioPlayer" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="oCU-dI-Wn6">
+                    <view key="view" contentMode="scaleToFill" id="oCU-dI-Wn6" customClass="SongView" customModule="AudioPlayer" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -56,40 +56,41 @@
                                 <rect key="frame" x="20" y="546.5" width="374" height="241.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="CZC-s2-zTc">
-                                        <rect key="frame" x="0.5" y="0.0" width="373" height="54.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="54.5"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="93" translatesAutoresizingMaskIntoConstraints="NO" id="lW7-ld-iLf">
-                                                <rect key="frame" x="0.0" y="0.0" width="373" height="31"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="lW7-ld-iLf">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="31"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3rG-ds-ffd">
-                                                        <rect key="frame" x="0.0" y="0.0" width="43.5" height="31"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3rG-ds-ffd">
+                                                        <rect key="frame" x="0.0" y="0.0" width="113.5" height="31"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" image="plus" catalog="system"/>
                                                     </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Album" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pfN-IZ-tqj">
-                                                        <rect key="frame" x="136.5" y="1" width="100" height="29"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="fG2-g4-xlt"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="24"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Album" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pfN-IZ-tqj">
+                                                        <rect key="frame" x="121.5" y="3.5" width="147" height="24"/>
+                                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="20"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V1c-Gs-Hsa">
-                                                        <rect key="frame" x="329.5" y="0.0" width="43.5" height="31"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V1c-Gs-Hsa">
+                                                        <rect key="frame" x="276.5" y="0.0" width="97.5" height="31"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" image="ellipsis" catalog="system"/>
                                                     </button>
                                                 </subviews>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YfI-YM-iBK">
-                                                <rect key="frame" x="166" y="34" width="41" height="20.5"/>
+                                                <rect key="frame" x="166.5" y="34" width="41" height="20.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="lW7-ld-iLf" secondAttribute="trailing" id="8we-9q-Eme"/>
+                                            <constraint firstItem="lW7-ld-iLf" firstAttribute="leading" secondItem="CZC-s2-zTc" secondAttribute="leading" id="I0W-e3-Jx2"/>
+                                        </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="d2B-ER-1ZD">
                                         <rect key="frame" x="0.0" y="84.5" width="374" height="17"/>
@@ -158,6 +159,9 @@
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" image="forward.end.fill" catalog="system"/>
+                                                <connections>
+                                                    <action selector="nextSongAction:" destination="oCU-dI-Wn6" eventType="touchUpInside" id="GXl-Qz-8ML"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Cs-rI-H5d">
                                                 <rect key="frame" x="325.5" y="9.5" width="47.5" height="31"/>
@@ -177,6 +181,10 @@
                                         <color key="thumbTintColor" systemColor="systemGreenColor"/>
                                     </slider>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="CZC-s2-zTc" firstAttribute="leading" secondItem="Stw-DX-8OE" secondAttribute="leading" id="0vE-Xt-0kX"/>
+                                    <constraint firstAttribute="trailing" secondItem="CZC-s2-zTc" secondAttribute="trailing" id="ABp-fe-25L"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wDa-1t-UMe"/>
@@ -190,25 +198,25 @@
                             <constraint firstAttribute="bottomMargin" secondItem="Stw-DX-8OE" secondAttribute="bottom" constant="54" id="hjt-tU-hjs"/>
                             <constraint firstItem="BEC-zc-w1h" firstAttribute="top" secondItem="wDa-1t-UMe" secondAttribute="top" constant="25" id="nJr-eb-pTo"/>
                         </constraints>
+                        <connections>
+                            <outlet property="artistName" destination="YfI-YM-iBK" id="MWg-GH-zWP"/>
+                            <outlet property="nextSongButton" destination="Jat-E8-YPE" id="QqH-Pi-4cI"/>
+                            <outlet property="playButton" destination="186-17-Vei" id="9gz-GO-n4D"/>
+                            <outlet property="prevSongButton" destination="Eg7-9r-nnJ" id="hxp-RC-S1V"/>
+                            <outlet property="repeatButton" destination="8Cs-rI-H5d" id="ezG-rS-Hat"/>
+                            <outlet property="shuffleButton" destination="KHj-5W-LiY" id="YxX-0N-8Vo"/>
+                            <outlet property="songDurationBackward" destination="VTx-ht-N1A" id="jUO-4j-qZg"/>
+                            <outlet property="songDurationForward" destination="sVg-S9-dq8" id="qpd-C3-3bv"/>
+                            <outlet property="songDurationStackView" destination="mNt-NG-I0R" id="R3x-Sx-dc3"/>
+                            <outlet property="songImage" destination="BEC-zc-w1h" id="ili-XM-Lcp"/>
+                            <outlet property="songName" destination="pfN-IZ-tqj" id="UwB-5A-2pg"/>
+                            <outlet property="volumeSlider" destination="cit-PS-bXm" id="O00-Fh-PBy"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Playing from album" id="hwQ-tF-qqg">
                         <barButtonItem key="leftBarButtonItem" image="chevron.down" catalog="system" id="zF3-YG-g3v"/>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="square.and.arrow.up" catalog="system" id="T5a-km-NXf"/>
                     </navigationItem>
-                    <connections>
-                        <outlet property="NextSongButton" destination="Jat-E8-YPE" id="foP-da-dKJ"/>
-                        <outlet property="artistName" destination="YfI-YM-iBK" id="VN4-3s-rRj"/>
-                        <outlet property="playButton" destination="186-17-Vei" id="dmf-WC-HQo"/>
-                        <outlet property="prevSongButton" destination="Eg7-9r-nnJ" id="Kkt-zB-xig"/>
-                        <outlet property="repeatButton" destination="8Cs-rI-H5d" id="zC4-nF-zC3"/>
-                        <outlet property="shuffleButton" destination="KHj-5W-LiY" id="sYq-Bb-W85"/>
-                        <outlet property="songDurationBackward" destination="VTx-ht-N1A" id="v2r-Ui-OTK"/>
-                        <outlet property="songDurationForward" destination="sVg-S9-dq8" id="AQv-7t-R30"/>
-                        <outlet property="songDurationStackView" destination="mNt-NG-I0R" id="4Pv-H4-uMm"/>
-                        <outlet property="songImage" destination="BEC-zc-w1h" id="jFN-jk-ozN"/>
-                        <outlet property="songName" destination="pfN-IZ-tqj" id="18k-Op-WoT"/>
-                        <outlet property="volumeSlider" destination="cit-PS-bXm" id="dsI-YA-E2k"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D11-fG-rX2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

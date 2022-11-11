@@ -34,6 +34,7 @@ class PlaylistViewController: UIViewController {
         if let navVC = segue.destination as? UINavigationController {
             guard let songVC = navVC.topViewController as? SongViewController else { return }
             songVC.song = sendSong
+            songVC.songs = songs
         }
     }
 }
