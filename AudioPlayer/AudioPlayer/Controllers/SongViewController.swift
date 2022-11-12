@@ -21,11 +21,18 @@ class SongViewController: UIViewController {
     }
     
     private func setupView() {
+        songView.delegate = self
         songView.passData(song, songs)
         songView.setupSubviews()
         self.navigationItem.titleView = UINavigationItem.setTitle(title: "Playing from album", subtitle: song.albumName ?? "")
         
     }
     
-    
+}
+
+extension SongViewController: SongViewDelegate {
+    func endListening() {
+        self.dismiss(animated: true)
+    }
+
 }

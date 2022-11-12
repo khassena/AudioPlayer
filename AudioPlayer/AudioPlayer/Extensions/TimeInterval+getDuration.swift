@@ -9,9 +9,10 @@ import Foundation
 
 extension TimeInterval {
     func getDuration() -> String {
-        let formatter = DateComponentsFormatter()
-        formatter.allowedUnits = [.minute, .second]
-        let duration = formatter.string(from: self)
-        return duration ?? ""
+        let duration = Int(self)
+        let minute = (duration / 60) % 60
+        let second = duration % 60
+        let time = String(format: "%0.1d:%0.2d", minute, second)
+        return time
     }
 }

@@ -149,6 +149,9 @@
                                                 <state key="normal" image="play.fill" catalog="system">
                                                     <color key="titleColor" systemColor="tintColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="playAction:" destination="oCU-dI-Wn6" eventType="touchUpInside" id="8Z1-98-stC"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jat-E8-YPE">
                                                 <rect key="frame" x="252" y="9" width="32" height="32"/>
@@ -171,7 +174,7 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="cit-PS-bXm">
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="20" translatesAutoresizingMaskIntoConstraints="NO" id="cit-PS-bXm">
                                         <rect key="frame" x="35" y="211.5" width="304" height="31"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="300" id="R7d-64-mrb"/>
@@ -179,6 +182,9 @@
                                         <color key="minimumTrackTintColor" systemColor="systemGreenColor"/>
                                         <color key="maximumTrackTintColor" red="0.19167103734153537" green="0.71796490974033" blue="0.026971062194559726" alpha="0.16" colorSpace="custom" customColorSpace="displayP3"/>
                                         <color key="thumbTintColor" systemColor="systemGreenColor"/>
+                                        <connections>
+                                            <action selector="volumeAction:" destination="oCU-dI-Wn6" eventType="valueChanged" id="rwI-hY-KcU"/>
+                                        </connections>
                                     </slider>
                                 </subviews>
                                 <constraints>
@@ -207,18 +213,24 @@
                             <outlet property="shuffleButton" destination="KHj-5W-LiY" id="YxX-0N-8Vo"/>
                             <outlet property="songDurationBackward" destination="VTx-ht-N1A" id="jUO-4j-qZg"/>
                             <outlet property="songDurationForward" destination="sVg-S9-dq8" id="qpd-C3-3bv"/>
-                            <outlet property="songDurationStackView" destination="mNt-NG-I0R" id="R3x-Sx-dc3"/>
+                            <outlet property="songDurationStackView" destination="d2B-ER-1ZD" id="Xvp-OL-whr"/>
                             <outlet property="songImage" destination="BEC-zc-w1h" id="ili-XM-Lcp"/>
                             <outlet property="songName" destination="pfN-IZ-tqj" id="UwB-5A-2pg"/>
                             <outlet property="volumeSlider" destination="cit-PS-bXm" id="O00-Fh-PBy"/>
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Playing from album" id="hwQ-tF-qqg">
-                        <barButtonItem key="leftBarButtonItem" image="chevron.down" catalog="system" id="zF3-YG-g3v"/>
+                        <barButtonItem key="leftBarButtonItem" image="chevron.down" catalog="system" id="zF3-YG-g3v">
+                            <connections>
+                                <action selector="dissmiss:" destination="oCU-dI-Wn6" id="q5u-Wb-jV6"/>
+                                <segue destination="fDc-Rl-dh7" kind="unwind" unwindAction="unwindSegueWithSegue:" id="jS1-LY-BXn"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="square.and.arrow.up" catalog="system" id="T5a-km-NXf"/>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D11-fG-rX2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="fDc-Rl-dh7" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2042.0289855072465" y="87.723214285714278"/>
         </scene>
