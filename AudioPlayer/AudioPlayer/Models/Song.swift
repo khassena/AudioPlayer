@@ -13,7 +13,7 @@ struct Song: Equatable {
     var albumName: String?
     var artist: String?
     var songImage: Data?
-    var songUrl: String?
+    var songUrl: Foundation.URL?
     var duration: String?
     var player: AVAudioPlayer?
 }
@@ -36,7 +36,7 @@ extension Song {
                                   albumName: asset.getItems(byKey: .commonKeyAlbumName),
                                   artist: asset.getItems(byKey: .commonKeyArtist),
                                   songImage: asset.metadata.first(where: { $0.commonKey == .commonKeyArtwork})?.value as? Data,
-                                  songUrl: "\(url)",
+                                  songUrl: url,
                                   duration: audioPlayer.duration.getDuration(),
                                   player: audioPlayer))
             }

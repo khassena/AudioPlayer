@@ -30,26 +30,39 @@ class SongView: UIView {
     
     weak var delegate: SongViewDelegate?
     private let songSlider = CustomSongSlider(thumbRadius: 10.0)
-    var songs = [Song]()
+    var songsDictionary = [Int:Song]()
     var song = Song()
     var timer: Timer?
     var player = AVAudioPlayer()
     
 
-    func passData(_ song: Song, _ songs: [Song]) {
-        self.song = song
-        self.songs = songs
-        self.player = song.player ?? AVAudioPlayer()
+    func passData( _ songs: [Song]) {
+        for music in songs.indices {
+            songsDictionary[music] = songs[music]
+        }
     }
     
-    public func setupSubviews() {
+    public func setupSubviews(_ song: Song) {
+        self.song = song
+        do {
+            guard let url = song.songUrl else { return }
+            let audioPlayer = try AVAudioPlayer(contentsOf: url)
+            self.player = audioPlayer
+        } catch {
+            print(error)
+        }
         songImage.image = (UIImage(data: song.songImage ?? Data())) ?? UIImage(named: "album-placeholder")
         songName.text = song.songName
         artistName.text = song.artist
         songSlider.maximumValue = Float(player.duration)
         songDurationStackView.addArrangedSubview(songSlider)
-        songSlider.addTarget(self, action: #selector(changeMusicTime), for: .valueChanged)
-        timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateSongSlider), userInfo: nil, repeats: true)
+        songSlider.addTarget(self,
+                             action: #selector(changeMusicTime),
+                             for: .valueChanged)
+        timer = Timer.scheduledTimer(timeInterval: 0.1,
+                                     target: self,
+                                     selector: #selector(updateSongSlider),
+                                     userInfo: nil, repeats: true)
         player.prepareToPlay()
         playPauseMusic()
     }
@@ -60,9 +73,27 @@ class SongView: UIView {
     }
     
     @IBAction func nextSongAction(_ sender: UIButton) {
-//        for music in songs.indices {
-//
-//        }
+        stopPlayer()
+        guard var key = songsDictionary.first(where: { $1 == song })?.key
+        else { return }
+        key += 1
+        if key == songsDictionary.count {
+            key = 0
+        }
+        guard let song = songsDictionary[key] else { return }
+        setupSubviews(song)
+    }
+    
+    @IBAction func prevSongAction(_ sender: UIButton) {
+        stopPlayer()
+        guard var key = songsDictionary.first(where: { $1 == song })?.key
+        else { return }
+        key -= 1
+        if key < 0 {
+            key = songsDictionary.count - 1
+        }
+        guard let song = songsDictionary[key] else { return }
+        setupSubviews(song)
     }
     
     @IBAction func volumeAction(_ sender: UISlider) {
@@ -70,10 +101,20 @@ class SongView: UIView {
     }
     
     @IBAction func dissmissByButton(_ sender: UIBarButtonItem) {
+        stopPlayer()
+        delegate?.endListening()
+    }
+    
+    @IBAction func shuffleButton(_ sender: UIButton) {
+    }
+    
+    @IBAction func repeatButton(_ sender: Any) {
+    }
+    
+    func stopPlayer() {
         player.stop()
         timer?.invalidate()
         timer = nil
-        delegate?.endListening()
     }
     
     func playPauseMusic() {

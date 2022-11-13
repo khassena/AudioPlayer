@@ -44,7 +44,7 @@
         <!--Playing from album-->
         <scene sceneID="xz9-A1-3hR">
             <objects>
-                <viewController storyboardIdentifier="sonVC" id="hke-hp-if8" customClass="SongViewController" customModule="AudioPlayer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="sonVC" interfaceStyle="light" id="hke-hp-if8" customClass="SongViewController" customModule="AudioPlayer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oCU-dI-Wn6" customClass="SongView" customModule="AudioPlayer" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -125,6 +125,9 @@
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="shuffle" catalog="system"/>
+                                                <connections>
+                                                    <action selector="shuffleButton:" destination="oCU-dI-Wn6" eventType="touchUpInside" id="hkh-pT-Kzp"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eg7-9r-nnJ">
                                                 <rect key="frame" x="89.5" y="9" width="32" height="32"/>
@@ -135,6 +138,9 @@
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" image="backward.end.fill" catalog="system"/>
+                                                <connections>
+                                                    <action selector="prevSongAction:" destination="oCU-dI-Wn6" eventType="touchUpInside" id="TH4-EW-3Zq"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" buttonType="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="186-17-Vei">
                                                 <rect key="frame" x="165.5" y="0.0" width="43" height="50"/>
@@ -171,6 +177,9 @@
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="repeat" catalog="system"/>
+                                                <connections>
+                                                    <action selector="repeatButton:" destination="oCU-dI-Wn6" eventType="touchUpInside" id="OWY-jD-Jtx"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -222,15 +231,13 @@
                     <navigationItem key="navigationItem" title="Playing from album" id="hwQ-tF-qqg">
                         <barButtonItem key="leftBarButtonItem" image="chevron.down" catalog="system" id="zF3-YG-g3v">
                             <connections>
-                                <action selector="dissmiss:" destination="oCU-dI-Wn6" id="q5u-Wb-jV6"/>
-                                <segue destination="fDc-Rl-dh7" kind="unwind" unwindAction="unwindSegueWithSegue:" id="jS1-LY-BXn"/>
+                                <action selector="dissmissByButton:" destination="oCU-dI-Wn6" id="FTd-fW-8Tm"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="square.and.arrow.up" catalog="system" id="T5a-km-NXf"/>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D11-fG-rX2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="fDc-Rl-dh7" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2042.0289855072465" y="87.723214285714278"/>
         </scene>

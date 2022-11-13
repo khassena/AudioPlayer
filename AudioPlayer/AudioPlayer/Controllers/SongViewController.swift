@@ -22,8 +22,9 @@ class SongViewController: UIViewController {
     
     private func setupView() {
         songView.delegate = self
-        songView.passData(song, songs)
-        songView.setupSubviews()
+        songView.passData(songs)
+        songView.setupSubviews(song)
+        self.isModalInPresentation = true
         self.navigationItem.titleView = UINavigationItem.setTitle(title: "Playing from album", subtitle: song.albumName ?? "")
         
     }
