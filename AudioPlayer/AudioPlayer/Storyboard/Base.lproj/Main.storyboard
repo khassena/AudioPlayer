@@ -50,7 +50,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="album-placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="BEC-zc-w1h">
-                                <rect key="frame" x="20" y="81" width="374" height="435.5"/>
+                                <rect key="frame" x="28" y="89" width="358" height="427.5"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Stw-DX-8OE">
                                 <rect key="frame" x="20" y="546.5" width="374" height="241.5"/>
@@ -63,6 +63,7 @@
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3rG-ds-ffd">
                                                         <rect key="frame" x="0.0" y="0.0" width="113.5" height="31"/>
+                                                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" image="plus" catalog="system"/>
                                                     </button>
@@ -74,6 +75,7 @@
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V1c-Gs-Hsa">
                                                         <rect key="frame" x="276.5" y="0.0" width="97.5" height="31"/>
+                                                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" image="ellipsis" catalog="system"/>
                                                     </button>
@@ -120,15 +122,25 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" spacing="41" translatesAutoresizingMaskIntoConstraints="NO" id="uzQ-fr-Iwi">
                                         <rect key="frame" x="0.5" y="131.5" width="373" height="50"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KHj-5W-LiY">
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Laq-IH-X3u">
                                                 <rect key="frame" x="0.0" y="9.5" width="48.5" height="31"/>
-                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="shuffle" catalog="system"/>
-                                                <connections>
-                                                    <action selector="shuffleButton:" destination="oCU-dI-Wn6" eventType="touchUpInside" id="hkh-pT-Kzp"/>
-                                                </connections>
-                                            </button>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KHj-5W-LiY">
+                                                        <rect key="frame" x="0.0" y="0.0" width="48.5" height="31"/>
+                                                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" image="shuffle" catalog="system"/>
+                                                        <buttonConfiguration key="configuration" style="plain" image="shuffle" catalog="system"/>
+                                                        <connections>
+                                                            <action selector="shuffleAction:" destination="oCU-dI-Wn6" eventType="touchUpInside" id="DUQ-24-xRd"/>
+                                                        </connections>
+                                                    </button>
+                                                    <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circlebadge.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="9ke-Dr-1xh">
+                                                        <rect key="frame" x="0.0" y="-2.5" width="48.5" height="5"/>
+                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eg7-9r-nnJ">
                                                 <rect key="frame" x="89.5" y="9" width="32" height="32"/>
                                                 <constraints>
@@ -172,29 +184,56 @@
                                                     <action selector="nextSongAction:" destination="oCU-dI-Wn6" eventType="touchUpInside" id="GXl-Qz-8ML"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Cs-rI-H5d">
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="tZd-hL-8FF">
                                                 <rect key="frame" x="325.5" y="9.5" width="47.5" height="31"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Cs-rI-H5d">
+                                                        <rect key="frame" x="0.0" y="0.0" width="47.5" height="31"/>
+                                                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" image="repeat" catalog="system"/>
+                                                        <buttonConfiguration key="configuration" style="plain" image="repeat" catalog="system"/>
+                                                        <connections>
+                                                            <action selector="repeatAction:" destination="oCU-dI-Wn6" eventType="touchUpInside" id="nv1-Jy-t2n"/>
+                                                        </connections>
+                                                    </button>
+                                                    <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circlebadge.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="u0H-vR-QVV">
+                                                        <rect key="frame" x="0.0" y="-2.5" width="47.5" height="5"/>
+                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="8Cs-rI-H5d" firstAttribute="centerY" secondItem="Jat-E8-YPE" secondAttribute="centerY" id="PbU-aY-nq8"/>
+                                            <constraint firstItem="Eg7-9r-nnJ" firstAttribute="centerY" secondItem="KHj-5W-LiY" secondAttribute="centerY" id="Us2-Gv-0uP"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="TwU-yJ-21x">
+                                        <rect key="frame" x="0.0" y="211.5" width="374" height="30"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="speaker.slash.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="dEI-gW-Qwb">
+                                                <rect key="frame" x="0.0" y="1.5" width="17.5" height="28"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="repeat" catalog="system"/>
+                                            </imageView>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="20" translatesAutoresizingMaskIntoConstraints="NO" id="cit-PS-bXm">
+                                                <rect key="frame" x="23.5" y="0.0" width="317" height="31"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="313" id="kOM-Rn-Nzp"/>
+                                                </constraints>
+                                                <color key="minimumTrackTintColor" systemColor="systemGreenColor"/>
+                                                <color key="maximumTrackTintColor" red="0.19167103734153537" green="0.71796490974033" blue="0.026971062194559726" alpha="0.16" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="thumbTintColor" systemColor="systemGreenColor"/>
                                                 <connections>
-                                                    <action selector="repeatButton:" destination="oCU-dI-Wn6" eventType="touchUpInside" id="OWY-jD-Jtx"/>
+                                                    <action selector="volumeAction:" destination="oCU-dI-Wn6" eventType="valueChanged" id="rwI-hY-KcU"/>
                                                 </connections>
-                                            </button>
+                                            </slider>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="speaker.wave.3.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="e9p-sI-mBF">
+                                                <rect key="frame" x="346.5" y="0.5" width="27.5" height="28.5"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </imageView>
                                         </subviews>
                                     </stackView>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="20" translatesAutoresizingMaskIntoConstraints="NO" id="cit-PS-bXm">
-                                        <rect key="frame" x="35" y="211.5" width="304" height="31"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="300" id="R7d-64-mrb"/>
-                                        </constraints>
-                                        <color key="minimumTrackTintColor" systemColor="systemGreenColor"/>
-                                        <color key="maximumTrackTintColor" red="0.19167103734153537" green="0.71796490974033" blue="0.026971062194559726" alpha="0.16" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <color key="thumbTintColor" systemColor="systemGreenColor"/>
-                                        <connections>
-                                            <action selector="volumeAction:" destination="oCU-dI-Wn6" eventType="valueChanged" id="rwI-hY-KcU"/>
-                                        </connections>
-                                    </slider>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="CZC-s2-zTc" firstAttribute="leading" secondItem="Stw-DX-8OE" secondAttribute="leading" id="0vE-Xt-0kX"/>
@@ -205,21 +244,21 @@
                         <viewLayoutGuide key="safeArea" id="wDa-1t-UMe"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="BEC-zc-w1h" firstAttribute="trailing" secondItem="oCU-dI-Wn6" secondAttribute="trailingMargin" id="3Ih-jb-AFB"/>
                             <constraint firstItem="Stw-DX-8OE" firstAttribute="top" secondItem="BEC-zc-w1h" secondAttribute="bottom" constant="30" id="5jK-Ku-l27"/>
-                            <constraint firstItem="BEC-zc-w1h" firstAttribute="leading" secondItem="oCU-dI-Wn6" secondAttribute="leadingMargin" id="U2z-pC-0mS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="BEC-zc-w1h" secondAttribute="trailing" constant="8" id="Gcq-hY-8ZP"/>
+                            <constraint firstItem="BEC-zc-w1h" firstAttribute="leading" secondItem="oCU-dI-Wn6" secondAttribute="leadingMargin" constant="8" id="U2z-pC-0mS"/>
                             <constraint firstItem="Stw-DX-8OE" firstAttribute="leading" secondItem="oCU-dI-Wn6" secondAttribute="leadingMargin" id="a1p-qv-1AO"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Stw-DX-8OE" secondAttribute="trailing" id="epX-Le-mxQ"/>
                             <constraint firstAttribute="bottomMargin" secondItem="Stw-DX-8OE" secondAttribute="bottom" constant="54" id="hjt-tU-hjs"/>
-                            <constraint firstItem="BEC-zc-w1h" firstAttribute="top" secondItem="wDa-1t-UMe" secondAttribute="top" constant="25" id="nJr-eb-pTo"/>
+                            <constraint firstItem="BEC-zc-w1h" firstAttribute="top" secondItem="wDa-1t-UMe" secondAttribute="top" constant="33" id="nJr-eb-pTo"/>
                         </constraints>
                         <connections>
                             <outlet property="artistName" destination="YfI-YM-iBK" id="MWg-GH-zWP"/>
-                            <outlet property="nextSongButton" destination="Jat-E8-YPE" id="QqH-Pi-4cI"/>
-                            <outlet property="playButton" destination="186-17-Vei" id="9gz-GO-n4D"/>
-                            <outlet property="prevSongButton" destination="Eg7-9r-nnJ" id="hxp-RC-S1V"/>
-                            <outlet property="repeatButton" destination="8Cs-rI-H5d" id="ezG-rS-Hat"/>
-                            <outlet property="shuffleButton" destination="KHj-5W-LiY" id="YxX-0N-8Vo"/>
+                            <outlet property="playButton" destination="186-17-Vei" id="ciF-ka-Y1q"/>
+                            <outlet property="repeatButton" destination="8Cs-rI-H5d" id="hxX-dX-zYa"/>
+                            <outlet property="repeatDotImage" destination="u0H-vR-QVV" id="IWx-A9-lS8"/>
+                            <outlet property="shuffleButton" destination="KHj-5W-LiY" id="1CX-sv-F93"/>
+                            <outlet property="shuffleDotImage" destination="9ke-Dr-1xh" id="VjS-fc-6Hb"/>
                             <outlet property="songDurationBackward" destination="VTx-ht-N1A" id="jUO-4j-qZg"/>
                             <outlet property="songDurationForward" destination="sVg-S9-dq8" id="qpd-C3-3bv"/>
                             <outlet property="songDurationStackView" destination="d2B-ER-1ZD" id="Xvp-OL-whr"/>
@@ -230,11 +269,14 @@
                     </view>
                     <navigationItem key="navigationItem" title="Playing from album" id="hwQ-tF-qqg">
                         <barButtonItem key="leftBarButtonItem" image="chevron.down" catalog="system" id="zF3-YG-g3v">
+                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="dissmissByButton:" destination="oCU-dI-Wn6" id="FTd-fW-8Tm"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="square.and.arrow.up" catalog="system" id="T5a-km-NXf"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="square.and.arrow.up" catalog="system" id="T5a-km-NXf">
+                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D11-fG-rX2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -287,12 +329,15 @@
         <image name="album-placeholder" width="500" height="500"/>
         <image name="backward.end.fill" catalog="system" width="128" height="102"/>
         <image name="chevron.down" catalog="system" width="128" height="72"/>
+        <image name="circlebadge.fill" catalog="system" width="128" height="120"/>
         <image name="ellipsis" catalog="system" width="128" height="37"/>
         <image name="forward.end.fill" catalog="system" width="128" height="102"/>
         <image name="play.fill" catalog="system" width="116" height="128"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="repeat" catalog="system" width="128" height="98"/>
         <image name="shuffle" catalog="system" width="128" height="95"/>
+        <image name="speaker.slash.fill" catalog="system" width="124" height="128"/>
+        <image name="speaker.wave.3.fill" catalog="system" width="128" height="86"/>
         <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

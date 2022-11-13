@@ -20,11 +20,11 @@ class SongView: UIView {
     @IBOutlet weak var songDurationForward: UILabel!
     @IBOutlet weak var songDurationBackward: UILabel!
     @IBOutlet weak var playButton: UIButton!
-    @IBOutlet weak var prevSongButton: UIButton!
-    @IBOutlet weak var nextSongButton: UIButton!
     @IBOutlet weak var shuffleButton: UIButton!
     @IBOutlet weak var repeatButton: UIButton!
     @IBOutlet weak var volumeSlider: UISlider!
+    @IBOutlet weak var shuffleDotImage: UIImageView!
+    @IBOutlet weak var repeatDotImage: UIImageView!
     
     @IBOutlet weak var songDurationStackView: UIStackView!
     
@@ -34,6 +34,8 @@ class SongView: UIView {
     var song = Song()
     var timer: Timer?
     var player = AVAudioPlayer()
+    var shuffleValue = false
+    var repeatValue = false
     
 
     func passData( _ songs: [Song]) {
@@ -47,6 +49,7 @@ class SongView: UIView {
         do {
             guard let url = song.songUrl else { return }
             let audioPlayer = try AVAudioPlayer(contentsOf: url)
+            audioPlayer.delegate = self
             self.player = audioPlayer
         } catch {
             print(error)
@@ -73,27 +76,11 @@ class SongView: UIView {
     }
     
     @IBAction func nextSongAction(_ sender: UIButton) {
-        stopPlayer()
-        guard var key = songsDictionary.first(where: { $1 == song })?.key
-        else { return }
-        key += 1
-        if key == songsDictionary.count {
-            key = 0
-        }
-        guard let song = songsDictionary[key] else { return }
-        setupSubviews(song)
+        nextSong(songFinish: false)
     }
     
     @IBAction func prevSongAction(_ sender: UIButton) {
-        stopPlayer()
-        guard var key = songsDictionary.first(where: { $1 == song })?.key
-        else { return }
-        key -= 1
-        if key < 0 {
-            key = songsDictionary.count - 1
-        }
-        guard let song = songsDictionary[key] else { return }
-        setupSubviews(song)
+        prevSong()
     }
     
     @IBAction func volumeAction(_ sender: UISlider) {
@@ -105,10 +92,71 @@ class SongView: UIView {
         delegate?.endListening()
     }
     
-    @IBAction func shuffleButton(_ sender: UIButton) {
+    @IBAction func shuffleAction(_ sender: UIButton) {
+        if shuffleDotImage.isHidden {
+            shuffleValue = true
+            shuffleButton.tintColor = .black
+            shuffleDotImage.isHidden = false
+            
+        } else {
+            shuffleValue = false
+            shuffleButton.tintColor = .darkGray
+            shuffleDotImage.isHidden = true
+        }
+        
     }
     
-    @IBAction func repeatButton(_ sender: Any) {
+    @IBAction func repeatAction(_ sender: UIButton) {
+        if repeatDotImage.isHidden {
+            repeatValue = true
+            repeatButton.tintColor = .black
+            repeatDotImage.isHidden = false
+            
+        } else {
+            repeatValue = false
+            repeatButton.tintColor = .darkGray
+            repeatDotImage.isHidden = true
+        }
+    }
+    
+    func nextSong(songFinish: Bool) {
+        stopPlayer()
+        var key = getKey(for: .next, songFinish: songFinish)
+        if key == songsDictionary.count {
+            key = 0
+        }
+        guard let song = songsDictionary[key] else { return }
+        setupSubviews(song)
+    }
+    
+    func prevSong() {
+        stopPlayer()
+        var key = getKey(for: .previous, songFinish: false)
+        if key < 0 {
+            key = songsDictionary.count - 1
+        }
+        guard let song = songsDictionary[key] else { return }
+        setupSubviews(song)
+    }
+    
+    func getKey(for direction: Direction, songFinish: Bool) -> Int {
+        guard var key = songsDictionary.first(where: { $1 == song })?.key
+        else { return 0 }
+        let songsArray = (0...songsDictionary.count - 1).filter {$0 != key}
+        guard let randomIndex = songsArray.randomElement() else { return 0 }
+        
+        if songFinish == true {
+            switch repeatValue {
+            case true: return key
+            default: key += direction.rawValue
+            }
+        } else {
+            switch shuffleValue {
+            case true: key = randomIndex
+            default: key += direction.rawValue
+            }
+        }
+        return key
     }
     
     func stopPlayer() {
@@ -144,6 +192,10 @@ class SongView: UIView {
         songDurationBackward.text = "-"+(player.duration - time).getDuration()
     }
     
-    
-    
+}
+
+extension SongView: AVAudioPlayerDelegate {
+    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
+        nextSong(songFinish: true)
+    }
 }

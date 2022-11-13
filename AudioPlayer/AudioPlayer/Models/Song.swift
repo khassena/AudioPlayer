@@ -8,6 +8,11 @@
 import Foundation
 import AVFoundation
 
+enum Direction: Int {
+    case next = 1
+    case previous = -1
+}
+
 struct Song: Equatable {
     var songName: String?
     var albumName: String?
