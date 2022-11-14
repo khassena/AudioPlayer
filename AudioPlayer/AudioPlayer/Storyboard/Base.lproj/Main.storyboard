@@ -49,11 +49,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="album-placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="BEC-zc-w1h">
-                                <rect key="frame" x="28" y="89" width="358" height="427.5"/>
-                            </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Stw-DX-8OE">
-                                <rect key="frame" x="20" y="546.5" width="374" height="241.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="Stw-DX-8OE">
+                                <rect key="frame" x="20" y="561.5" width="374" height="226.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="CZC-s2-zTc">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="54.5"/>
@@ -95,7 +92,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="d2B-ER-1ZD">
-                                        <rect key="frame" x="0.0" y="84.5" width="374" height="17"/>
+                                        <rect key="frame" x="0.0" y="79.5" width="374" height="17"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="290" translatesAutoresizingMaskIntoConstraints="NO" id="mNt-NG-I0R">
                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="17"/>
@@ -120,7 +117,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" spacing="41" translatesAutoresizingMaskIntoConstraints="NO" id="uzQ-fr-Iwi">
-                                        <rect key="frame" x="0.5" y="131.5" width="373" height="50"/>
+                                        <rect key="frame" x="0.5" y="121.5" width="373" height="50"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Laq-IH-X3u">
                                                 <rect key="frame" x="0.0" y="9.5" width="48.5" height="31"/>
@@ -210,7 +207,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="TwU-yJ-21x">
-                                        <rect key="frame" x="0.0" y="211.5" width="374" height="30"/>
+                                        <rect key="frame" x="0.0" y="196.5" width="374" height="30"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="speaker.slash.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="dEI-gW-Qwb">
                                                 <rect key="frame" x="0.0" y="1.5" width="17.5" height="28"/>
@@ -240,20 +237,38 @@
                                     <constraint firstAttribute="trailing" secondItem="CZC-s2-zTc" secondAttribute="trailing" id="ABp-fe-25L"/>
                                 </constraints>
                             </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FgE-oc-RYk" userLabel="ContainerView">
+                                <rect key="frame" x="32" y="89" width="350" height="369.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="album-placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="r68-1q-LCk">
+                                        <rect key="frame" x="0.0" y="0.0" width="350" height="369.5"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.39607840779999998" green="0.76862752440000004" blue="0.40000003579999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="r68-1q-LCk" firstAttribute="leading" secondItem="FgE-oc-RYk" secondAttribute="leadingMargin" id="AAL-eM-bxb"/>
+                                    <constraint firstItem="r68-1q-LCk" firstAttribute="trailing" secondItem="FgE-oc-RYk" secondAttribute="trailingMargin" id="Dck-n3-a3Y"/>
+                                    <constraint firstItem="r68-1q-LCk" firstAttribute="bottom" secondItem="FgE-oc-RYk" secondAttribute="bottomMargin" id="MPh-Wx-lMM"/>
+                                    <constraint firstAttribute="height" constant="369.5" id="Ond-9X-r2C"/>
+                                    <constraint firstItem="r68-1q-LCk" firstAttribute="top" secondItem="FgE-oc-RYk" secondAttribute="topMargin" id="zvg-sQ-GG1"/>
+                                </constraints>
+                                <directionalEdgeInsets key="directionalLayoutMargins" top="0.0" leading="0.0" bottom="0.0" trailing="0.0"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wDa-1t-UMe"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Stw-DX-8OE" firstAttribute="top" secondItem="BEC-zc-w1h" secondAttribute="bottom" constant="30" id="5jK-Ku-l27"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="BEC-zc-w1h" secondAttribute="trailing" constant="8" id="Gcq-hY-8ZP"/>
-                            <constraint firstItem="BEC-zc-w1h" firstAttribute="leading" secondItem="oCU-dI-Wn6" secondAttribute="leadingMargin" constant="8" id="U2z-pC-0mS"/>
+                            <constraint firstItem="FgE-oc-RYk" firstAttribute="leading" secondItem="oCU-dI-Wn6" secondAttribute="leadingMargin" constant="12" id="35K-ev-IrA"/>
+                            <constraint firstItem="Stw-DX-8OE" firstAttribute="top" relation="greaterThanOrEqual" secondItem="FgE-oc-RYk" secondAttribute="bottom" constant="48" id="CaP-xs-ZPe"/>
                             <constraint firstItem="Stw-DX-8OE" firstAttribute="leading" secondItem="oCU-dI-Wn6" secondAttribute="leadingMargin" id="a1p-qv-1AO"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Stw-DX-8OE" secondAttribute="trailing" id="epX-Le-mxQ"/>
                             <constraint firstAttribute="bottomMargin" secondItem="Stw-DX-8OE" secondAttribute="bottom" constant="54" id="hjt-tU-hjs"/>
-                            <constraint firstItem="BEC-zc-w1h" firstAttribute="top" secondItem="wDa-1t-UMe" secondAttribute="top" constant="33" id="nJr-eb-pTo"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="FgE-oc-RYk" secondAttribute="trailing" constant="12" id="rw2-iW-bzm"/>
+                            <constraint firstItem="FgE-oc-RYk" firstAttribute="top" secondItem="wDa-1t-UMe" secondAttribute="top" constant="33" id="xmc-HP-rHd"/>
                         </constraints>
                         <connections>
                             <outlet property="artistName" destination="YfI-YM-iBK" id="MWg-GH-zWP"/>
+                            <outlet property="containerView" destination="FgE-oc-RYk" id="EU1-E0-zZa"/>
                             <outlet property="playButton" destination="186-17-Vei" id="ciF-ka-Y1q"/>
                             <outlet property="repeatButton" destination="8Cs-rI-H5d" id="hxX-dX-zYa"/>
                             <outlet property="repeatDotImage" destination="u0H-vR-QVV" id="IWx-A9-lS8"/>
@@ -262,7 +277,7 @@
                             <outlet property="songDurationBackward" destination="VTx-ht-N1A" id="jUO-4j-qZg"/>
                             <outlet property="songDurationForward" destination="sVg-S9-dq8" id="qpd-C3-3bv"/>
                             <outlet property="songDurationStackView" destination="d2B-ER-1ZD" id="Xvp-OL-whr"/>
-                            <outlet property="songImage" destination="BEC-zc-w1h" id="ili-XM-Lcp"/>
+                            <outlet property="songImage" destination="r68-1q-LCk" id="OKe-nb-qZs"/>
                             <outlet property="songName" destination="pfN-IZ-tqj" id="UwB-5A-2pg"/>
                             <outlet property="volumeSlider" destination="cit-PS-bXm" id="O00-Fh-PBy"/>
                         </connections>

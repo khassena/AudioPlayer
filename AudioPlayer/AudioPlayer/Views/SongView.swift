@@ -14,6 +14,7 @@ protocol SongViewDelegate: AnyObject {
 
 class SongView: UIView {
     
+    @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var songImage: UIImageView!
     @IBOutlet weak var songName: UILabel!
     @IBOutlet weak var artistName: UILabel!
@@ -37,7 +38,7 @@ class SongView: UIView {
     var shuffleValue = false
     var repeatValue = false
     
-
+    
     func passData( _ songs: [Song]) {
         for music in songs.indices {
             songsDictionary[music] = songs[music]
@@ -54,11 +55,12 @@ class SongView: UIView {
         } catch {
             print(error)
         }
-        songImage.image = (UIImage(data: song.songImage ?? Data())) ?? UIImage(named: "album-placeholder")
         songName.text = song.songName
         artistName.text = song.artist
         songSlider.maximumValue = Float(player.duration)
         songDurationStackView.addArrangedSubview(songSlider)
+        songImage.image = (UIImage(data: song.songImage ?? Data())) ?? UIImage(named: "album-placeholder")
+        songImage.layer.cornerRadius = 10.0
         songSlider.addTarget(self,
                              action: #selector(changeMusicTime),
                              for: .valueChanged)
@@ -77,6 +79,7 @@ class SongView: UIView {
     
     @IBAction func nextSongAction(_ sender: UIButton) {
         nextSong(songFinish: false)
+        
     }
     
     @IBAction func prevSongAction(_ sender: UIButton) {
@@ -100,7 +103,7 @@ class SongView: UIView {
             
         } else {
             shuffleValue = false
-            shuffleButton.tintColor = .darkGray
+            shuffleButton.tintColor = .lightGray
             shuffleDotImage.isHidden = true
         }
         
@@ -114,7 +117,7 @@ class SongView: UIView {
             
         } else {
             repeatValue = false
-            repeatButton.tintColor = .darkGray
+            repeatButton.tintColor = .lightGray
             repeatDotImage.isHidden = true
         }
     }
