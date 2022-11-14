@@ -36,12 +36,15 @@ class SongViewController: UIViewController {
         
         self.isModalInPresentation = true
         self.navigationItem.titleView = UINavigationItem.setTitle(title: "Playing from album", subtitle: song.albumName ?? "")
-        
     }
     
 }
 
 extension SongViewController: SongViewDelegate {
+    func changeSong(_ albumName: String?) {
+        self.navigationItem.titleView = UINavigationItem.setTitle(title: "Playing from album", subtitle: albumName ?? "")
+    }
+    
     func endListening() {
         self.dismiss(animated: true)
     }

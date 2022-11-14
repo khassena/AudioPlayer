@@ -10,6 +10,7 @@ import AVFoundation
 
 protocol SongViewDelegate: AnyObject {
     func endListening()
+    func changeSong(_ albumName: String?)
 }
 
 class SongView: UIView {
@@ -129,6 +130,7 @@ class SongView: UIView {
             key = 0
         }
         guard let song = songsDictionary[key] else { return }
+        delegate?.changeSong(song.albumName)
         setupSubviews(song)
     }
     
@@ -139,6 +141,7 @@ class SongView: UIView {
             key = songsDictionary.count - 1
         }
         guard let song = songsDictionary[key] else { return }
+        delegate?.changeSong(song.albumName)
         setupSubviews(song)
     }
     
