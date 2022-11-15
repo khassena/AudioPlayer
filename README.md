@@ -11,3 +11,6 @@
 9. Добавить функционал для кнопки share (UIActivityController) (заменить картинку бургеры в правом верхнем углу на кнопку share)
 10. По нажатию на левую стрелочку вверху экрана закрыть этот экран
 ![image](https://user-images.githubusercontent.com/116908046/199676429-ab410510-7070-4923-b8ad-0a707fa6c1ca.png)
+Архитектура MVC
+Auto Layout 60% - Storyboard, 40% - NSLayoutConstraint 
+![Simulator Screen Recording - iPhone 11 - 2022-11-14 at 17 24 42](https://user-images.githubusercontent.com/116908046/201963357-74d29bf3-8f87-486b-a5cc-fe7556560241.gif)
