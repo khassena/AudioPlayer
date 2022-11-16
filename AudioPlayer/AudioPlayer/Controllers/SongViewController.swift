@@ -20,17 +20,22 @@ class SongViewController: UIViewController {
         setupView()
     }
     
-    private func setupView() {
-        songView.delegate = self
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
         songView.containerView.layer.cornerRadius = 10.0
         songView.containerView.layer.shadowColor = UIColor.black.cgColor
         songView.containerView.layer.shadowOffset = .zero
         songView.containerView.layer.shadowOpacity = 1.0
         songView.containerView.layer.shadowRadius = 10.0
         let cgPath = UIBezierPath(roundedRect: songView.containerView.bounds,
-                                  byRoundingCorners: [.allCorners], cornerRadii: CGSize(width: 10.0, height: 10.0)).cgPath
+                                  byRoundingCorners: [.allCorners],
+                                  cornerRadii: CGSize(width: 10.0, height: 10.0)).cgPath
         songView.containerView.layer.shadowPath = cgPath
         songView.containerView.layer.shouldRasterize = true
+    }
+    
+    private func setupView() {
+        songView.delegate = self
         songView.passData(songs)
         songView.setupSubviews(song)
         
