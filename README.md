@@ -1,17 +1,41 @@
 # AudioPlayer - with Storyboard
-Создаем музыкальный плеер!
-Не используем UITableView!
-1. Создать экран, который содержит картинку альбома, название песни и ее длительность (захардкодить)
-2. При нажатии на песню попадаем на следующий экран (модально отображаем его не на весь экран)
-3. На втором экране создаем UI точно такой же, как указан на картинке второго экрана, при этом работает кнопка пауза и плей (должна воспроизводить песню и ставить на паузу), слайдер должен показывать реальное время проигрывания, при перетаскивании слайдера перематывается песня
-4. Время песни над слайдером реальное
-5. Для проигрывания песен скачать 2 любых mp3 песни 6. При нажатии на первую песню играет одна песня, при нажатии на вторую играет вторая песня
-7. Добавить громкость и переключение между двумя песнями
-8. Перебрасывать название песни с первого экрана на второй
-9. Добавить функционал для кнопки share (UIActivityController) (заменить картинку бургеры в правом верхнем углу на кнопку share)
-10. По нажатию на левую стрелочку вверху экрана закрыть этот экран
-![image](https://user-images.githubusercontent.com/116908046/199676429-ab410510-7070-4923-b8ad-0a707fa6c1ca.png)
 
-Архитектура MVC,  
-Auto Layout 60% - Storyboard, 40% - NSAutoLayoutAnchor   
-![Simulator Screen Recording - iPhone 11 - 2022-11-14 at 17 24 42](https://user-images.githubusercontent.com/116908046/201963357-74d29bf3-8f87-486b-a5cc-fe7556560241.gif)
+## Description
+
+iOS application that takes data from a file about a song that is stored in applications and outputs songs to
+the user that he can open and listen to / change the volume / rewind / pause / repeat / move the playlist
+
+## Technologies
+
+* UIKit
+* MVC
+* AutoLayout - Storyboard, programmatically (NSAutoLayoutAnchor)
+* AVFoundation
+
+## Features
+
+1. The application takes the data about the song from the .mp3 file and displays the songs on the screen (UI is set without UITableView)
+2. When you click on the song, we get to the next screen 
+3. Automatic song starts playing
+4. You can pause, switch to the next and previous song
+5. You can control the volume using the slider
+7. You can rewind to a certain segment of the song
+8. When you click on repeat - the song plays again at the endings
+9. When you click on shuffle, the next song turns on randomly
+10.
+
+<table>
+    <thead>
+        <tr>
+            <th>Audio Player</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                <img width="250" src="Gif/Audio.gif">
+            </td>
+        </tr>
+    </tbody>
+</table>
+
